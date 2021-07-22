@@ -20,6 +20,8 @@ with col_title:
 with col_cont:
   selected_region = st.selectbox('', regions )
 
+plt.style.use("./ara_background.mplstyle")
+
 col1, col2 = st.beta_columns([5,3])
 
 with st.beta_container():
@@ -69,10 +71,13 @@ with st.beta_container():
   col3, col4, col5 = st.beta_columns(3)
   
   with col3:
+    st.header('Horse Power')
     st.bar_chart( df_cont[['Horse Power']] )
 
   with col4:
+    st.header('Cylinders')
     st.bar_chart( df[['cylinders', 'continent']].groupby('continent').agg('median') )
 
   with col5:
+    st.header('Time to 60 (seconds)')
     st.bar_chart( df_cont[['time-to-60']] )
