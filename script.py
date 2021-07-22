@@ -4,7 +4,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-#st.set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 
 URL_CSV = 'https://raw.githubusercontent.com/murpi/wilddata/master/quests/cars.csv'
 df = pd.read_csv(URL_CSV)
